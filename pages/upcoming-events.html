@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upcoming Events — Rangify Decorz Grand Launch</title>
+  <meta name="description" content="Rangify Decorz Grand Launch Event — Register your interest, view schedule, and explore sponsorship opportunities." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { min-height:50vh; display:flex; align-items:flex-end; padding-bottom:5rem; padding-top:8rem; position:relative; background:radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.1) 0%, transparent 60%), var(--black); overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; inset:0; opacity:0.03; background-image: repeating-linear-gradient(0deg, transparent, transparent 80px, var(--gold) 80px, var(--gold) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, var(--gold) 80px, var(--gold) 81px); }
+    .page-hero-content { position:relative; z-index:1; }
+    .breadcrumb { font-size:0.72rem; color:var(--text-dim); margin-bottom:1rem; }
+    .breadcrumb a { color:var(--gold); text-decoration:none; }
+    .countdown-section { background:var(--black-soft); padding:4rem 0; }
+    .countdown-wrap { display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; }
+    .countdown-box { text-align:center; background:var(--black-card); border:1px solid var(--border-strong); padding:2rem 2.5rem; min-width:120px; }
+    .countdown-num { font-family:var(--font-display); font-size:3.5rem; font-weight:900; color:var(--gold); line-height:1; display:block; }
+    .countdown-label { font-size:0.65rem; font-weight:700; letter-spacing:0.3em; text-transform:uppercase; color:var(--text-dim); margin-top:0.5rem; }
+    .event-full-card { background:var(--black-card); border:1px solid var(--border-strong); overflow:hidden; }
+    .event-full-header { background:linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.03)); border-bottom:1px solid var(--border); padding:3rem; display:grid; grid-template-columns:1fr auto; align-items:center; gap:2rem; }
+    .event-badge-row { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+    .event-badge { display:inline-flex; align-items:center; gap:0.5rem; padding:0.35rem 1rem; border-radius:100px; font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; }
+    .badge-live { background:rgba(255,80,80,0.15); border:1px solid rgba(255,80,80,0.4); color:#ff5050; }
+    .badge-gold { background:rgba(201,168,76,0.12); border:1px solid var(--border-strong); color:var(--gold); }
+    .badge-dot { width:6px; height:6px; border-radius:50%; background:currentColor; animation:pulse 2s infinite; }
+    .event-full-body { padding:3rem; display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
+    .schedule-list { display:flex; flex-direction:column; gap:0; }
+    .schedule-item { display:grid; grid-template-columns:80px 1fr; gap:1.5rem; padding:1.2rem 0; border-bottom:1px solid var(--border); align-items:start; }
+    .schedule-time { font-family:var(--font-body); font-size:0.75rem; font-weight:700; color:var(--gold); letter-spacing:0.08em; padding-top:0.2rem; }
+    .schedule-title { font-size:0.95rem; font-weight:600; color:var(--white); margin-bottom:0.25rem; }
+    .schedule-desc { font-size:0.8rem; color:var(--text-dim); }
+    .register-form-wrap { background:var(--black); border:1px solid var(--border); padding:2.5rem; }
+    .register-form-wrap h3 { font-family:var(--font-display); font-size:1.5rem; color:var(--gold); margin-bottom:0.5rem; }
+    .register-form-wrap p { font-size:0.85rem; color:var(--text-dim); margin-bottom:1.5rem; }
+    .form-group { margin-bottom:1rem; }
+    .form-group label { display:block; font-size:0.68rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:0.4rem; }
+    .form-group input, .form-group select, .form-group textarea { width:100%; background:var(--black-card2); border:1px solid var(--border); color:var(--white); padding:0.85rem 1rem; font-family:var(--font-body); font-size:0.87rem; outline:none; transition:border-color 0.3s ease; }
+    .form-group input:focus, .form-group select:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,168,76,0.1); }
+    .guests-section { background:var(--black); }
+    .guests-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:3rem; }
+    .guest-card { background:var(--black-card); border:1px solid var(--border); padding:1.8rem; text-align:center; transition:var(--transition); }
+    .guest-card:hover { border-color:var(--border-strong); transform:translateY(-4px); }
+    .guest-avatar { width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg, var(--gold-dark), var(--gold)); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:1.8rem; font-weight:700; color:var(--black); margin:0 auto 1rem; border:2px solid var(--gold); }
+    .guest-name { font-family:var(--font-heading); font-size:1rem; font-weight:600; color:var(--white); margin-bottom:0.3rem; }
+    .guest-role { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); }
+    .guest-desc { font-size:0.8rem; color:var(--text-dim); margin-top:0.5rem; }
+    .tba-card { border:1px dashed rgba(201,168,76,0.3); background:rgba(201,168,76,0.03); display:flex; align-items:center; justify-content:center; flex-direction:column; gap:0.5rem; padding:2rem; }
+    .tba-card span { font-size:0.72rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-dim); }
+    @media (max-width:992px) { .event-full-header { grid-template-columns:1fr; } .event-full-body { grid-template-columns:1fr; } .guests-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:480px) { .guests-grid { grid-template-columns:1fr; } .countdown-wrap { gap:1rem; } .countdown-box { padding:1.5rem; min-width:80px; } .countdown-num { font-size:2.5rem; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="logo"><span class="logo-main">Rangify Decorz</span><span class="logo-sub">Premium Event Management</span></a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="upcoming-events.html" style="color:var(--gold)">Events</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="sponsorship.html">Partner With Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+919876543210" class="btn btn-outline btn-sm">📞 Call Now</a>
+      <a href="book.html" class="btn btn-gold btn-sm">Book Your Event</a>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="../index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="upcoming-events.html">Events</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="sponsorship.html">Partner With Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" style="color:var(--gold)">Book Your Event →</a>
+</div>
+
+<div class="page-hero">
+  <div class="container page-hero-content">
+    <div class="breadcrumb"><a href="../index.html">Home</a> → Upcoming Events</div>
+    <span class="section-label">Mark Your Calendar</span>
+    <h1 class="section-title">Grand Launch <span>Event 2025</span></h1>
+    <p style="font-family:var(--font-heading);font-size:1.25rem;font-style:italic;color:var(--white-muted);max-width:600px;line-height:1.7;">The most anticipated event management company launch in the Unnao-Kanpur-Lucknow region. Be there.</p>
+  </div>
+</div>
+
+<div class="countdown-section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:2rem;">
+      <span class="section-label">Launching In</span>
+    </div>
+    <div class="countdown-wrap" id="countdown">
+      <div class="countdown-box"><span class="countdown-num" id="cd-days">--</span><span class="countdown-label">Days</span></div>
+      <div class="countdown-box"><span class="countdown-num" id="cd-hours">--</span><span class="countdown-label">Hours</span></div>
+      <div class="countdown-box"><span class="countdown-num" id="cd-min">--</span><span class="countdown-label">Minutes</span></div>
+      <div class="countdown-box"><span class="countdown-num" id="cd-sec">--</span><span class="countdown-label">Seconds</span></div>
+    </div>
+  </div>
+</div>
+
+<section style="background:var(--black);">
+  <div class="container">
+    <div class="event-full-card fade-up">
+      <div class="event-full-header">
+        <div>
+          <div class="event-badge-row">
+            <span class="event-badge badge-live"><span class="badge-dot"></span>Registrations Open</span>
+            <span class="event-badge badge-gold">✦ Grand Launch</span>
+            <span class="event-badge badge-gold">📍 Kanpur / Unnao</span>
+          </div>
+          <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,3rem);margin-bottom:0.8rem;">Rangify Decorz <span>Official Grand Launch</span></h2>
+          <p style="color:var(--white-muted);font-family:var(--font-heading);font-style:italic;font-size:1.1rem;margin-bottom:1rem;">Witness the future of event management in Uttar Pradesh</p>
+          <p style="color:var(--text-dim);font-size:0.88rem;line-height:1.8;max-width:640px;">Our official Grand Launch is a full-scale event showcasing everything Rangify Decorz represents — premium décor, live entertainment, food experiences, and the complete event management ecosystem. Sponsorship slots are limited. Register your interest today.</p>
+        </div>
+        <div style="text-align:center;padding:2rem;border:1px solid var(--border);background:rgba(201,168,76,0.04);min-width:200px;">
+          <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;">Date</span>
+          <span style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;color:var(--white);display:block;line-height:1;">TBA</span>
+          <span style="font-size:0.78rem;color:var(--text-dim);">To Be Announced</span>
+          <div style="margin:1.2rem 0;height:1px;background:var(--border);"></div>
+          <span style="font-size:0.65rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.3rem;">Venue</span>
+          <span style="font-size:0.88rem;color:var(--white);">Kanpur / Unnao</span>
+          <span style="font-size:0.78rem;color:var(--text-dim);display:block;">UP Region</span>
+        </div>
+      </div>
+      <div class="event-full-body">
+        <div>
+          <h3 style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);margin-bottom:1.5rem;">Event Schedule</h3>
+          <div class="schedule-list">
+            <div class="schedule-item">
+              <span class="schedule-time">5:00 PM</span>
+              <div><div class="schedule-title">Doors Open & Registration</div><div class="schedule-desc">Guest welcome, registration, and guided tour of the décor showcase.</div></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">6:00 PM</span>
+              <div><div class="schedule-title">Official Inauguration</div><div class="schedule-desc">Ribbon cutting, welcome address by Rangify Decorz Founder & distinguished guests.</div></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">6:30 PM</span>
+              <div><div class="schedule-title">Services Showcase</div><div class="schedule-desc">Live demonstration of décor setups, stage designs, photography setups & vendor stalls.</div></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">7:30 PM</span>
+              <div><div class="schedule-title">Live Entertainment</div><div class="schedule-desc">Live singer performance, DJ set, and anchor-hosted entertainment program.</div></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">8:30 PM</span>
+              <div><div class="schedule-title">Dinner & Networking</div><div class="schedule-desc">Premium catering experience, halwai counters, and business networking opportunity.</div></div>
+            </div>
+            <div class="schedule-item">
+              <span class="schedule-time">9:30 PM</span>
+              <div><div class="schedule-title">Grand Finale</div><div class="schedule-desc">Vote of thanks, sponsor recognition, special announcements & lucky draw.</div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="register-form-wrap">
+            <h3>Register Your Interest</h3>
+            <p>Be among the first to know about the Grand Launch date and get exclusive early-bird perks.</p>
+            <form id="contactForm">
+              <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name" required /></div>
+              <div class="form-group"><label>Phone Number *</label><input type="tel" placeholder="+91 98765 43210" required /></div>
+              <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com" /></div>
+              <div class="form-group"><label>City</label><select><option>Unnao</option><option>Kanpur</option><option>Lucknow</option><option>Other</option></select></div>
+              <div class="form-group"><label>I am interested in</label><select><option>Attending the Event</option><option>Sponsorship Opportunity</option><option>Vendor Partnership</option><option>Media Coverage</option></select></div>
+              <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Register Now →</button>
+            </form>
+          </div>
+          <div style="margin-top:1.5rem;padding:1.5rem;border:1px solid var(--border);background:var(--black-card);">
+            <h4 style="font-family:var(--font-heading);font-size:1rem;color:var(--gold);margin-bottom:1rem;">What to Expect</h4>
+            <div style="display:flex;flex-direction:column;gap:0.6rem;">
+              <div style="display:flex;gap:0.8rem;align-items:center;font-size:0.84rem;color:var(--white-muted);">✦ <span>Live décor & stage showcase</span></div>
+              <div style="display:flex;gap:0.8rem;align-items:center;font-size:0.84rem;color:var(--white-muted);">✦ <span>Professional entertainment</span></div>
+              <div style="display:flex;gap:0.8rem;align-items:center;font-size:0.84rem;color:var(--white-muted);">✦ <span>Premium food & catering display</span></div>
+              <div style="display:flex;gap:0.8rem;align-items:center;font-size:0.84rem;color:var(--white-muted);">✦ <span>Exclusive launch packages</span></div>
+              <div style="display:flex;gap:0.8rem;align-items:center;font-size:0.84rem;color:var(--white-muted);">✦ <span>Networking with regional businesses</span></div>
+              <div style="display:flex;gap:0.8rem;align-items:center;font-size:0.84rem;color:var(--white-muted);">✦ <span>Lucky draw & giveaways</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guests-section">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;max-width:600px;margin:0 auto;">
+      <span class="section-label">Confirmed Guests</span>
+      <h2 class="section-title">Special <span>Guests & Performers</span></h2>
+      <div class="divider divider-center"></div>
+      <p class="section-subtitle" style="margin:0 auto 1rem;">A lineup of distinguished guests, artists, and performers to make the Grand Launch truly unforgettable.</p>
+    </div>
+    <div class="guests-grid fade-up fade-up-delay-1">
+      <div class="guest-card">
+        <div class="guest-avatar">🎤</div>
+        <div class="guest-name">Live Singer</div>
+        <div class="guest-role">Performer</div>
+        <div class="guest-desc">Regional popular artist — announcement coming soon.</div>
+      </div>
+      <div class="guest-card">
+        <div class="guest-avatar">🎧</div>
+        <div class="guest-name">DJ Performance</div>
+        <div class="guest-role">Entertainment</div>
+        <div class="guest-desc">Professional DJ with premium sound system setup.</div>
+      </div>
+      <div class="guest-card">
+        <div class="guest-avatar">🎙️</div>
+        <div class="guest-name">Professional Anchor</div>
+        <div class="guest-role">Host</div>
+        <div class="guest-desc">Expert anchor to host the evening's program.</div>
+      </div>
+      <div class="tba-card guest-card">
+        <div style="font-size:2rem;">⭐</div>
+        <span>More Guests</span>
+        <span>To Be Announced</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--black-soft);">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;max-width:700px;margin:0 auto;">
+      <span class="section-label">Get Involved</span>
+      <h2 class="section-title">Sponsorship <span>Opportunities</span></h2>
+      <div class="divider divider-center"></div>
+      <p class="section-subtitle" style="margin:0 auto 2.5rem;">The Grand Launch is a prime opportunity for local businesses to gain massive visibility. Limited slots available.</p>
+      <div style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;">
+        <a href="sponsorship.html" class="btn btn-gold btn-lg">View Sponsor Packages →</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Talk to Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:2rem;border-top:1px solid var(--border);">
+      <a href="../index.html" style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);text-decoration:none;">Rangify Decorz</a>
+      <span style="color:var(--text-dim);font-size:0.8rem;">© 2025 Rangify Decorz. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">💬</a>
+<script src="../js/main.js"></script>
+<script>
+  // Countdown to a target date — update this when date is set
+  const targetDate = new Date('2025-12-31T18:00:00');
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+    if (diff <= 0) {
+      document.getElementById('cd-days').textContent = '00';
+      document.getElementById('cd-hours').textContent = '00';
+      document.getElementById('cd-min').textContent = '00';
+      document.getElementById('cd-sec').textContent = '00';
+      return;
+    }
+    document.getElementById('cd-days').textContent = String(Math.floor(diff / 86400000)).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,'0');
+    document.getElementById('cd-min').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
+    document.getElementById('cd-sec').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>

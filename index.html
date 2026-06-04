@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rangify Decorz — Premium Event Management | Unnao, Kanpur, Lucknow</title>
+  <meta name="description" content="Rangify Decorz is the leading event management company in Unnao, Kanpur & Lucknow. Weddings, corporate events, birthdays & more. One call handles everything." />
+  <meta name="keywords" content="event management Unnao, event management Kanpur, event management Lucknow, wedding planner Unnao, event company Kanpur, Rangify Decorz" />
+  <meta property="og:title" content="Rangify Decorz — You Celebrate. We Handle Everything." />
+  <meta property="og:description" content="Premium event management company in UP. From concept to execution, we handle everything." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://rangifydecorz.com/" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Page-specific styles */
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      background: var(--black-card2);
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: 0.9rem 1.2rem;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      transition: border-color 0.3s ease;
+      outline: none;
+      border-radius: var(--radius);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group select { appearance: none; cursor: pointer; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- =================== NAVBAR =================== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-main">Rangify Decorz</span>
+      <span class="logo-sub">Premium Event Management</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="pages/about.html">About</a></li>
+      <li><a href="pages/upcoming-events.html">Events</a></li>
+      <li><a href="pages/portfolio.html">Portfolio</a></li>
+      <li><a href="pages/sponsorship.html">Partner With Us</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+919876543210" class="btn btn-outline btn-sm">📞 Call Now</a>
+      <a href="pages/book.html" class="btn btn-gold btn-sm">Book Your Event</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- =================== MOBILE MENU =================== -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="index.html">Home</a>
+  <a href="#services">Services</a>
+  <a href="pages/about.html">About</a>
+  <a href="pages/upcoming-events.html">Events</a>
+  <a href="pages/portfolio.html">Portfolio</a>
+  <a href="pages/sponsorship.html">Partner With Us</a>
+  <a href="pages/contact.html">Contact</a>
+  <a href="pages/book.html" style="color: var(--gold);">Book Your Event →</a>
+</div>
+
+<!-- =================== HERO =================== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span>Unnao · Kanpur · Lucknow</span>
+      </div>
+      <h1 class="hero-headline">
+        We Turn Your<br><span class="gold">Dream Events</span><br>Into Reality
+      </h1>
+      <p class="hero-tagline">"You Celebrate. We Handle Everything."</p>
+      <p class="hero-desc">From the first call to the final applause — we plan, manage, and execute every detail of your event so you can be fully present in the moment that matters.</p>
+      <div class="hero-cta">
+        <a href="pages/book.html" class="btn btn-gold btn-lg">Book Your Event →</a>
+        <a href="#services" class="btn btn-outline btn-lg">Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="hero-stat-num" data-target="200" data-suffix="+">0+</span>
+          <div class="hero-stat-label">Events Managed</div>
+        </div>
+        <div>
+          <span class="hero-stat-num" data-target="500" data-suffix="+">0+</span>
+          <div class="hero-stat-label">Happy Clients</div>
+        </div>
+        <div>
+          <span class="hero-stat-num" data-target="3">0</span>
+          <div class="hero-stat-label">Cities Served</div>
+        </div>
+        <div>
+          <span class="hero-stat-num" data-target="100" data-suffix="+">0+</span>
+          <div class="hero-stat-label">Vendor Network</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-frame hero-img-main">
+        <div class="img-placeholder">
+          ✦<br>Wedding<br>Showcase
+        </div>
+      </div>
+      <div class="hero-img-frame hero-img-2">
+        <div class="img-placeholder">✦<br>Corporate</div>
+      </div>
+      <div class="hero-img-frame hero-img-3">
+        <div class="img-placeholder">Decor</div>
+      </div>
+      <div class="hero-floating-card">
+        <div class="floating-card-label">Upcoming</div>
+        <div class="floating-card-val">Grand<br>Launch</div>
+        <div class="floating-card-sub">2025 · Register Now →</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- =================== PROOF BAR =================== -->
+<div class="proof-bar" id="proof">
+  <div class="proof-bar-inner">
+    <div class="proof-item fade-up">
+      <span class="proof-num"><span data-target="200" data-suffix="+">200+</span></span>
+      <div class="proof-label">Events Managed</div>
+    </div>
+    <div class="proof-item fade-up fade-up-delay-1">
+      <span class="proof-num"><span data-target="500" data-suffix="+">500+</span></span>
+      <div class="proof-label">Happy Clients</div>
+    </div>
+    <div class="proof-item fade-up fade-up-delay-2">
+      <span class="proof-num"><span data-target="100" data-suffix="+">100+</span></span>
+      <div class="proof-label">Vendor Network</div>
+    </div>
+    <div class="proof-item fade-up fade-up-delay-3">
+      <span class="proof-num"><span data-target="3">3</span></span>
+      <div class="proof-label">Cities Served</div>
+    </div>
+  </div>
+</div>
+
+<!-- =================== WHY RANGIFY =================== -->
+<section class="why-rangify" id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content fade-up">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">The <span>Stress-Free</span> Event Experience You Deserve</h2>
+        <div class="why-promise">
+          <p>"Just tell us your vision and budget. One call is all it takes — we handle every detail from there."</p>
+        </div>
+        <p class="section-subtitle" style="margin-bottom:2rem;">Rangify Decorz is not just an event company. We are your single point of contact for end-to-end event management — from initial planning through flawless on-ground execution.</p>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon">📞</div>
+            <div class="why-feature-text">
+              <h4>One Call. Everything Done.</h4>
+              <p>Tell us your vision once. Our dedicated team handles all vendors, logistics, and execution.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">🏠</div>
+            <div class="why-feature-text">
+              <h4>In-House Team & Materials</h4>
+              <p>Our own skilled team and equipment means better quality control and significant cost savings.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">💰</div>
+            <div class="why-feature-text">
+              <h4>Budget-Friendly Customization</h4>
+              <p>Premium experiences designed to fit every budget — no compromise on quality or elegance.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:2.5rem;">
+          <a href="pages/about.html" class="btn btn-gold">Our Story →</a>
+        </div>
+      </div>
+      <div class="why-visual-grid fade-up fade-up-delay-2">
+        <div class="why-vis-card">
+          <div class="why-vis-card-num">01</div>
+          <h3>Complete End-to-End Management</h3>
+          <p>We manage every single aspect of your event — from venue booking and vendor coordination to day-of execution and guest management. Nothing falls through the cracks.</p>
+        </div>
+        <div class="why-vis-card">
+          <div class="why-vis-card-num">02</div>
+          <h3>Trusted Vendor Network</h3>
+          <p>Access to 100+ vetted vendors across the region for catering, photography, music, and more.</p>
+        </div>
+        <div class="why-vis-card">
+          <div class="why-vis-card-num">03</div>
+          <h3>Zero Stress Guarantee</h3>
+          <p>You show up, celebrate, and make memories. We handle the rest — completely and professionally.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SERVICES =================== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="fade-up" style="text-align:center; max-width:600px; margin:0 auto;">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Complete <span>Event Solutions</span></h2>
+      <div class="divider divider-center"></div>
+      <p class="section-subtitle" style="margin:0 auto 1rem;">From concept to execution — every service you need under one roof.</p>
+    </div>
+    <div class="services-grid fade-up fade-up-delay-1">
+      <a href="pages/services.html#planning" class="service-card">
+        <span class="service-icon">📋</span>
+        <h3>Event Planning & Management</h3>
+        <p>Full-scope planning, timelines, vendor coordination, and seamless on-ground execution.</p>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="pages/services.html#wedding" class="service-card">
+        <span class="service-icon">💍</span>
+        <h3>Wedding Planning</h3>
+        <p>From mehendi to reception — every ritual planned with love, precision, and elegance.</p>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="pages/services.html#corporate" class="service-card">
+        <span class="service-icon">🏢</span>
+        <h3>Corporate Events</h3>
+        <p>Conferences, product launches, seminars, and team events that impress and inspire.</p>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="pages/services.html#decor" class="service-card">
+        <span class="service-icon">🌸</span>
+        <h3>Decoration & Stage Design</h3>
+        <p>Bespoke stage setups, floral decorations, and immersive event environments.</p>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="pages/services.html#entertainment" class="service-card">
+        <span class="service-icon">🎤</span>
+        <h3>DJ, Artists & Anchors</h3>
+        <p>Top DJs, live singers, professional anchors, and complete artist management.</p>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="pages/services.html#catering" class="service-card">
+        <span class="service-icon">🍽️</span>
+        <h3>Catering & Halwai Services</h3>
+        <p>Premium catering, traditional halwai, and complete food & beverage management.</p>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="pages/services.html#media" class="service-card">
+        <span class="service-icon">📸</span>
+        <h3>Photography & Videography</h3>
+        <p>Cinematic coverage, drone photography, and live streaming for every precious moment.</p>
+        <span class="service-arrow">→</span>
+      </a>
+      <a href="pages/services.html#venue" class="service-card">
+        <span class="service-icon">🏛️</span>
+        <h3>Venue & Logistics</h3>
+        <p>Venue sourcing, booking, water supply, guest management, and complete logistics.</p>
+        <span class="service-arrow">→</span>
+      </a>
+    </div>
+    <div class="services-cta fade-up">
+      <a href="pages/services.html" class="btn btn-outline">View All Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== HOW IT WORKS =================== -->
+<section class="how-it-works" id="process">
+  <div class="container">
+    <div class="fade-up" style="text-align:center; max-width:600px; margin:0 auto;">
+      <span class="section-label">Our Process</span>
+      <h2 class="section-title">How It <span>Works</span></h2>
+      <div class="divider divider-center"></div>
+      <p class="section-subtitle" style="margin:0 auto;">Four simple steps. Zero stress. One unforgettable event.</p>
+    </div>
+    <div class="steps-container">
+      <div class="step fade-up fade-up-delay-1">
+        <div class="step-num-wrap">
+          <div class="step-num">01</div>
+          <span class="step-icon">💬</span>
+        </div>
+        <h3>Tell Us Your Vision</h3>
+        <p>One call or message. Share your event idea, requirements, and budget — that's all you need to do.</p>
+      </div>
+      <div class="step fade-up fade-up-delay-2">
+        <div class="step-num-wrap">
+          <div class="step-num">02</div>
+          <span class="step-icon">📝</span>
+        </div>
+        <h3>Get a Customized Plan</h3>
+        <p>We craft a detailed proposal tailored to your vision and budget — covering every service you need.</p>
+      </div>
+      <div class="step fade-up fade-up-delay-3">
+        <div class="step-num-wrap">
+          <div class="step-num">03</div>
+          <span class="step-icon">⚡</span>
+        </div>
+        <h3>We Execute Everything</h3>
+        <p>Our dedicated team coordinates all vendors, manages the setup, and ensures flawless execution.</p>
+      </div>
+      <div class="step fade-up fade-up-delay-4">
+        <div class="step-num-wrap">
+          <div class="step-num">04</div>
+          <span class="step-icon">🎉</span>
+        </div>
+        <h3>You Enjoy the Event</h3>
+        <p>Be fully present with your family and guests. We handle every detail so you can simply celebrate.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:3.5rem;" class="fade-up">
+      <a href="pages/book.html" class="btn btn-gold btn-lg">Start Planning Today →</a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== UPCOMING EVENTS =================== -->
+<section class="upcoming-events" id="upcoming">
+  <div class="container">
+    <div class="fade-up" style="max-width:600px;">
+      <span class="section-label">Don't Miss Out</span>
+      <h2 class="section-title">Upcoming <span>Events</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="launch-event-card fade-up fade-up-delay-1">
+      <div class="launch-event-visual">
+        <div class="launch-visual-inner">
+          <div class="event-date-big">2025</div>
+          <div class="event-month">Coming Soon</div>
+        </div>
+      </div>
+      <div class="launch-event-info">
+        <div class="event-tag">🔥 Grand Launch Event</div>
+        <h2 class="section-title" style="margin-bottom:0.5rem;">Rangify Decorz<br><span>Grand Launch</span></h2>
+        <p class="tagline">Witness the Future of Event Management in Unnao-Kanpur Region</p>
+        <p class="description">We are launching officially with a grand celebration event. Expect live entertainment, showcases of our services, exclusive packages, sponsorship opportunities, and a night to remember. Be among the first to experience the Rangify Decorz difference.</p>
+        <div class="event-details-list">
+          <div class="event-detail-item">
+            <span class="detail-icon">📅</span>
+            <div>
+              <span class="detail-label">Date</span>
+              <span class="detail-value">To Be Announced</span>
+            </div>
+          </div>
+          <div class="event-detail-item">
+            <span class="detail-icon">📍</span>
+            <div>
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Kanpur / Unnao Region</span>
+            </div>
+          </div>
+          <div class="event-detail-item">
+            <span class="detail-icon">🎤</span>
+            <div>
+              <span class="detail-label">Highlights</span>
+              <span class="detail-value">Live Acts, Showcase, Networking</span>
+            </div>
+          </div>
+          <div class="event-detail-item">
+            <span class="detail-icon">🤝</span>
+            <div>
+              <span class="detail-label">Opportunities</span>
+              <span class="detail-value">Sponsorships & Partnerships Open</span>
+            </div>
+          </div>
+        </div>
+        <div class="launch-cta">
+          <a href="pages/upcoming-events.html" class="btn btn-gold">Register Interest →</a>
+          <a href="pages/sponsorship.html" class="btn btn-outline">Become a Sponsor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PORTFOLIO =================== -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="portfolio-header fade-up">
+      <div>
+        <span class="section-label">Our Work</span>
+        <h2 class="section-title">Featured <span>Events</span></h2>
+      </div>
+      <a href="pages/portfolio.html" class="btn btn-outline">View All →</a>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item fade-up">
+        <div class="portfolio-img-bg">
+          <div class="portfolio-placeholder">Wedding Photography<br>Coming Soon</div>
+        </div>
+        <div class="portfolio-overlay">
+          <div>
+            <span class="portfolio-item-label">Wedding</span>
+            <div class="portfolio-item-title">Royal Wedding, Kanpur</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-1">
+        <div class="portfolio-img-bg">
+          <div class="portfolio-placeholder">Corporate<br>Event</div>
+        </div>
+        <div class="portfolio-overlay">
+          <div>
+            <span class="portfolio-item-label">Corporate</span>
+            <div class="portfolio-item-title">Annual Conference</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-2">
+        <div class="portfolio-img-bg">
+          <div class="portfolio-placeholder">Birthday<br>Celebration</div>
+        </div>
+        <div class="portfolio-overlay">
+          <div>
+            <span class="portfolio-item-label">Birthday</span>
+            <div class="portfolio-item-title">Grand Birthday Bash</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-1">
+        <div class="portfolio-img-bg">
+          <div class="portfolio-placeholder">Cultural<br>Event</div>
+        </div>
+        <div class="portfolio-overlay">
+          <div>
+            <span class="portfolio-item-label">Cultural</span>
+            <div class="portfolio-item-title">Festival Celebration</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-2">
+        <div class="portfolio-img-bg">
+          <div class="portfolio-placeholder">Stage Design<br>Showcase</div>
+        </div>
+        <div class="portfolio-overlay">
+          <div>
+            <span class="portfolio-item-label">Stage & Decor</span>
+            <div class="portfolio-item-title">Premium Stage Design</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item fade-up fade-up-delay-3">
+        <div class="portfolio-img-bg">
+          <div class="portfolio-placeholder">School<br>Event</div>
+        </div>
+        <div class="portfolio-overlay">
+          <div>
+            <span class="portfolio-item-label">School Event</span>
+            <div class="portfolio-item-title">Annual Day Function</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TRUST =================== -->
+<section class="trust-section" id="trust">
+  <div class="container">
+    <div class="fade-up" style="text-align:center; max-width:600px; margin:0 auto;">
+      <span class="section-label">Why Clients Trust Us</span>
+      <h2 class="section-title">Built on <span>Excellence</span></h2>
+      <div class="divider divider-center"></div>
+    </div>
+    <div class="trust-grid fade-up fade-up-delay-1">
+      <div class="trust-card">
+        <span class="trust-card-icon">👥</span>
+        <h3>In-House Expert Team</h3>
+        <p>Our skilled, experienced professionals are employees — not outsourced freelancers. This ensures consistent quality, accountability, and a team that truly cares about your event.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-card-icon">🏗️</span>
+        <h3>In-House Materials & Inventory</h3>
+        <p>We own our equipment, decor materials, and stage infrastructure — eliminating middlemen and giving you premium quality at better prices.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-card-icon">🌐</span>
+        <h3>Strong Vendor Network</h3>
+        <p>Over 100 vetted partner vendors across Unnao, Kanpur, and Lucknow — giving us unmatched coverage and reliability for every event need.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-card-icon">📱</span>
+        <h3>One Point of Contact</h3>
+        <p>No confusion, no miscommunication. You work with a single dedicated event manager from inquiry to execution — always reachable, always accountable.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-card-icon">💎</span>
+        <h3>Budget-Flexible Packages</h3>
+        <p>Luxury doesn't have to be expensive. We create premium experiences tailored to your budget — no hidden costs, no surprises.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-card-icon">🎯</span>
+        <h3>Zero-Stress Experience</h3>
+        <p>From the first consultation to the last guest leaving — we take complete ownership so you are free to enjoy every moment of your event.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TESTIMONIALS =================== -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="fade-up" style="text-align:center; max-width:600px; margin:0 auto;">
+      <span class="section-label">Client Love</span>
+      <h2 class="section-title">What Clients <span>Say</span></h2>
+      <div class="divider divider-center"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-quote">"</div>
+        <div class="stars">★★★★★</div>
+        <p>Rangify Decorz turned our daughter's wedding into an absolute dream. Every detail was perfect — the decoration, the catering, the music. We didn't have to worry about a single thing. Truly exceptional service.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RV</div>
+          <div>
+            <span class="author-name">Rakesh Verma</span>
+            <span class="author-role">Wedding Client, Unnao</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up fade-up-delay-1">
+        <div class="testimonial-quote">"</div>
+        <div class="stars">★★★★★</div>
+        <p>We hired Rangify for our company's annual conference in Kanpur. The professionalism was outstanding — from stage setup to guest management. Our leadership team was thoroughly impressed.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PS</div>
+          <div>
+            <span class="author-name">Priya Sharma</span>
+            <span class="author-role">Corporate Client, Kanpur</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up fade-up-delay-2">
+        <div class="testimonial-quote">"</div>
+        <div class="stars">★★★★★</div>
+        <p>My son's birthday party was beyond imagination. The decor, the DJ, the food — everything was absolutely top class. The team was incredibly responsive and creative. Highly recommended!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div>
+            <span class="author-name">Anjali Mishra</span>
+            <span class="author-role">Birthday Event, Lucknow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== EVENT TYPES =================== -->
+<section class="event-types" id="event-types">
+  <div class="container">
+    <div class="fade-up" style="text-align:center; max-width:600px; margin:0 auto;">
+      <span class="section-label">Events We Manage</span>
+      <h2 class="section-title">Every <span>Occasion</span> Covered</h2>
+      <div class="divider divider-center"></div>
+    </div>
+    <div class="event-types-grid fade-up fade-up-delay-1">
+      <a href="pages/services.html#wedding" class="event-type-card">
+        <span class="event-type-emoji">💍</span>
+        <h3>Weddings & Shaadis</h3>
+        <p>From intimate ceremonies to grand celebrations — every ritual, perfectly managed.</p>
+      </a>
+      <a href="pages/services.html#birthday" class="event-type-card">
+        <span class="event-type-emoji">🎂</span>
+        <h3>Birthday Celebrations</h3>
+        <p>Milestone birthdays, kids' parties, surprise events — all made unforgettable.</p>
+      </a>
+      <a href="pages/services.html#corporate" class="event-type-card">
+        <span class="event-type-emoji">🏢</span>
+        <h3>Corporate Events</h3>
+        <p>Conferences, product launches, seminars, team outings, and award ceremonies.</p>
+      </a>
+      <a href="pages/services.html#cultural" class="event-type-card">
+        <span class="event-type-emoji">🎭</span>
+        <h3>Cultural & Religious Events</h3>
+        <p>Festivals, pooja ceremonies, community programs, and cultural celebrations.</p>
+      </a>
+      <a href="pages/services.html#school" class="event-type-card">
+        <span class="event-type-emoji">🎓</span>
+        <h3>School & College Events</h3>
+        <p>Annual days, farewell parties, fests, and educational institution events.</p>
+      </a>
+      <a href="pages/services.html#community" class="event-type-card">
+        <span class="event-type-emoji">🌟</span>
+        <h3>Community Events</h3>
+        <p>Public gatherings, NGO events, society celebrations, and community programs.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SPONSORSHIP =================== -->
+<section class="sponsorship" id="sponsorship">
+  <div class="container">
+    <div class="fade-up" style="text-align:center; max-width:640px; margin:0 auto;">
+      <span class="section-label">Grow With Us</span>
+      <h2 class="section-title">Sponsorship &<br><span>Partnership Opportunities</span></h2>
+      <div class="divider divider-center"></div>
+      <p class="section-subtitle" style="margin:0 auto 1rem;">Join the Rangify Decorz ecosystem and reach thousands of event attendees across Unnao, Kanpur & Lucknow.</p>
+    </div>
+    <div class="sponsor-tiers fade-up fade-up-delay-1">
+      <div class="sponsor-tier">
+        <div class="tier-icon">📚</div>
+        <div class="tier-name">Education Partner</div>
+        <p class="tier-desc">Reach parents, students & families at every event</p>
+        <ul class="tier-benefits">
+          <li>Brand at School Events</li>
+          <li>Brochure Distribution</li>
+          <li>Social Media Tags</li>
+        </ul>
+        <a href="pages/sponsorship.html" class="btn btn-outline btn-sm">Inquire →</a>
+      </div>
+      <div class="sponsor-tier">
+        <div class="tier-icon">🍽️</div>
+        <div class="tier-name">Food Partner</div>
+        <p class="tier-desc">Exclusive catering & F&B branding at events</p>
+        <ul class="tier-benefits">
+          <li>F&B Table Branding</li>
+          <li>Menu Co-branding</li>
+          <li>Event Announcements</li>
+        </ul>
+        <a href="pages/sponsorship.html" class="btn btn-outline btn-sm">Inquire →</a>
+      </div>
+      <div class="sponsor-tier featured">
+        <div class="tier-icon">🏆</div>
+        <div class="tier-name">Premium Sponsor</div>
+        <p class="tier-desc">Maximum visibility across all Rangify events</p>
+        <ul class="tier-benefits">
+          <li>Stage Backdrop Logo</li>
+          <li>MC Announcements</li>
+          <li>VIP Invitations</li>
+          <li>Social & Digital PR</li>
+        </ul>
+        <a href="pages/sponsorship.html" class="btn btn-gold btn-sm">Inquire →</a>
+      </div>
+      <div class="sponsor-tier">
+        <div class="tier-icon">📺</div>
+        <div class="tier-name">Media Partner</div>
+        <p class="tier-desc">Content creation & coverage partnership</p>
+        <ul class="tier-benefits">
+          <li>Press Coverage</li>
+          <li>Cross-Promotion</li>
+          <li>Content Collaboration</li>
+        </ul>
+        <a href="pages/sponsorship.html" class="btn btn-outline btn-sm">Inquire →</a>
+      </div>
+      <div class="sponsor-tier">
+        <div class="tier-icon">💼</div>
+        <div class="tier-name">Business Partner</div>
+        <p class="tier-desc">Long-term vendor & business partnerships</p>
+        <ul class="tier-benefits">
+          <li>Vendor Empanelment</li>
+          <li>Referral Network</li>
+          <li>Exclusive Contracts</li>
+        </ul>
+        <a href="pages/sponsorship.html" class="btn btn-outline btn-sm">Inquire →</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;" class="fade-up">
+      <a href="pages/sponsorship.html" class="btn btn-outline">View All Partnership Options →</a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FAQ =================== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="fade-up" style="text-align:center; max-width:600px; margin:0 auto;">
+      <span class="section-label">Got Questions?</span>
+      <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+      <div class="divider divider-center"></div>
+    </div>
+    <div class="faq-grid fade-up fade-up-delay-1">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How far in advance should I book?</span>
+          <div class="faq-toggle">+</div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">We recommend booking at least 2–3 months in advance for weddings and large events to ensure availability of your preferred vendors and venues. For smaller events, 2–4 weeks is usually sufficient. That said, we do accommodate urgent bookings — just call us!</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Do you work with all budgets?</span>
+          <div class="faq-toggle">+</div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes, absolutely. We offer flexible, customized packages for all budget ranges. Our in-house materials and vendor network allow us to create premium experiences that are cost-efficient. Share your budget with us and we'll design the best possible event for you.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Which cities do you serve?</span>
+          <div class="faq-toggle">+</div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">We primarily serve Unnao, Kanpur, and Lucknow. However, we are available for events across Uttar Pradesh. For events outside these regions, please contact us to discuss logistics and feasibility.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>What makes Rangify Decorz different?</span>
+          <div class="faq-toggle">+</div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Unlike most local event companies, we offer true end-to-end management with an in-house team, in-house materials, and a single point of contact. No running between multiple vendors. One call and we take care of everything — from planning to execution.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can I see your past event work?</span>
+          <div class="faq-toggle">+</div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes! Visit our Portfolio page to see our featured events, gallery, and videos. You can also follow us on Instagram and YouTube for our latest work. Additionally, we can arrange a personal consultation where we showcase our complete portfolio.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How do I get started?</span>
+          <div class="faq-toggle">+</div>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">It's simple! Click "Book Your Event" or call us directly. Share your event details, requirements, and budget. We'll schedule a free consultation and provide you with a customized proposal within 24 hours. That's it — we take it from there!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FINAL CTA =================== -->
+<section class="final-cta">
+  <div class="container">
+    <div class="fade-up">
+      <div class="final-cta-label">Let's Create Something Extraordinary</div>
+      <h2 class="section-title">Ready To Create An<br><span>Unforgettable Event?</span></h2>
+      <p>Join hundreds of happy clients who trusted Rangify Decorz to make their most important moments absolutely perfect.</p>
+      <div class="final-cta-btns">
+        <a href="pages/book.html" class="btn btn-gold btn-lg">Schedule A Free Consultation →</a>
+        <a href="tel:+919876543210" class="btn btn-outline btn-lg">📞 Call Us Now</a>
+      </div>
+      <div class="final-guarantee">
+        <div class="guarantee-item"><span>✦</span> Free Consultation</div>
+        <div class="guarantee-item"><span>✦</span> No Obligation Quote</div>
+        <div class="guarantee-item"><span>✦</span> 24-Hour Response</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-main">Rangify Decorz</span>
+          <span class="logo-sub">Premium Event Management</span>
+        </a>
+        <p class="footer-tagline">"You Celebrate. We Handle Everything."</p>
+        <p class="footer-desc">The leading event management company in Unnao, Kanpur & Lucknow — delivering premium, stress-free event experiences from planning to execution.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Instagram">📷</a>
+          <a href="#" class="social-link" title="Facebook">📘</a>
+          <a href="#" class="social-link" title="YouTube">▶️</a>
+          <a href="#" class="social-link" title="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="pages/services.html#wedding">Wedding Planning</a></li>
+          <li><a href="pages/services.html#corporate">Corporate Events</a></li>
+          <li><a href="pages/services.html#birthday">Birthday Events</a></li>
+          <li><a href="pages/services.html#decor">Decoration</a></li>
+          <li><a href="pages/services.html#catering">Catering</a></li>
+          <li><a href="pages/services.html#media">Photography</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/portfolio.html">Portfolio</a></li>
+          <li><a href="pages/upcoming-events.html">Upcoming Events</a></li>
+          <li><a href="pages/sponsorship.html">Sponsorships</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/book.html">Book Your Event</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact">
+          <div class="footer-contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <a href="tel:+919876543210" style="color:var(--white-muted);text-decoration:none;">+91 98765 43210</a><br>
+              <a href="tel:+919876543211" style="color:var(--text-dim);text-decoration:none;font-size:0.8rem;">+91 98765 43211</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <span class="contact-icon">📧</span>
+            <a href="mailto:hello@rangifydecorz.com" style="color:var(--white-muted);text-decoration:none;">hello@rangifydecorz.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="contact-icon">📍</span>
+            <span>Unnao, Uttar Pradesh<br><span style="color:var(--text-dim);font-size:0.8rem;">Serving Kanpur & Lucknow</span></span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="contact-icon">⏰</span>
+            <span>Mon – Sun: 9 AM – 9 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Rangify Decorz. All rights reserved.</span>
+      <span>Designed with ✦ for <a href="#">Premium Events</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- =================== FLOATING ELEMENTS =================== -->
+<div class="sticky-cta">
+  <a href="pages/book.html" class="sticky-btn sticky-btn-book">Book Event</a>
+  <a href="tel:+919876543210" class="sticky-btn sticky-btn-call">Call Now</a>
+</div>
+
+<a href="https://wa.me/919876543210?text=Hi%20Rangify%20Decorz!%20I%20want%20to%20enquire%20about%20an%20event." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
