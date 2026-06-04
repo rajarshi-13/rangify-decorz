@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Rangify Decorz | Our Events Gallery</title>
+  <meta name="description" content="Browse Rangify Decorz's portfolio — weddings, corporate events, birthday celebrations, cultural events, and more in Unnao, Kanpur & Lucknow." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { min-height:44vh; display:flex; align-items:flex-end; padding-bottom:5rem; padding-top:8rem; position:relative; background:radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.08) 0%, transparent 60%), var(--black); overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; inset:0; opacity:0.03; background-image: repeating-linear-gradient(0deg, transparent, transparent 80px, var(--gold) 80px, var(--gold) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, var(--gold) 80px, var(--gold) 81px); }
+    .page-hero-content { position:relative; z-index:1; }
+    .breadcrumb { font-size:0.72rem; color:var(--text-dim); margin-bottom:1rem; }
+    .breadcrumb a { color:var(--gold); text-decoration:none; }
+    .filter-bar { display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:3rem; padding-bottom:2rem; border-bottom:1px solid var(--border); }
+    .filter-btn { padding:0.5rem 1.4rem; border:1px solid var(--border); background:none; color:var(--text-dim); font-family:var(--font-body); font-size:0.75rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:var(--transition); }
+    .filter-btn:hover, .filter-btn.active { border-color:var(--gold); color:var(--gold); background:rgba(201,168,76,0.06); }
+    .portfolio-masonry { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .portfolio-card { position:relative; overflow:hidden; background:var(--black-card); border:1px solid var(--border); cursor:pointer; transition:var(--transition); }
+    .portfolio-card:hover { border-color:var(--border-strong); }
+    .portfolio-card.large { grid-column:span 2; }
+    .portfolio-card.tall { grid-row:span 2; }
+    .portfolio-card-img { width:100%; height:280px; background:linear-gradient(145deg, #1e1a12, #2a2218); display:flex; align-items:center; justify-content:center; transition:transform 0.5s ease; }
+    .portfolio-card.large .portfolio-card-img { height:280px; }
+    .portfolio-card.tall .portfolio-card-img { height:580px; }
+    .portfolio-card:hover .portfolio-card-img { transform:scale(1.04); }
+    .portfolio-card-overlay { position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 60%); opacity:0; transition:opacity 0.4s ease; display:flex; align-items:flex-end; padding:1.8rem; }
+    .portfolio-card:hover .portfolio-card-overlay { opacity:1; }
+    .portfolio-card-content { width:100%; }
+    .pcc-category { font-size:0.62rem; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:0.4rem; }
+    .pcc-title { font-family:var(--font-heading); font-size:1.1rem; color:var(--white); display:block; margin-bottom:0.3rem; }
+    .pcc-location { font-size:0.78rem; color:var(--text-dim); }
+    .placeholder-icon { font-size:2.5rem; opacity:0.3; }
+    .placeholder-text { font-family:var(--font-heading); font-size:0.72rem; color:var(--gold); opacity:0.5; letter-spacing:0.15em; text-transform:uppercase; text-align:center; margin-top:0.5rem; }
+    .stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:5rem; }
+    .stat-box { background:var(--black-card); padding:2.5rem 2rem; text-align:center; }
+    .stat-box-num { font-family:var(--font-display); font-size:2.8rem; font-weight:900; color:var(--gold); line-height:1; display:block; }
+    .stat-box-label { font-size:0.7rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-dim); margin-top:0.5rem; }
+    @media (max-width:768px) { .portfolio-masonry { grid-template-columns:1fr 1fr; } .portfolio-card.large { grid-column:span 2; } .portfolio-card.tall { grid-row:auto; } .portfolio-card.tall .portfolio-card-img { height:280px; } .stats-row { grid-template-columns:1fr 1fr; } }
+    @media (max-width:480px) { .portfolio-masonry { grid-template-columns:1fr; } .portfolio-card.large { grid-column:auto; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="logo"><span class="logo-main">Rangify Decorz</span><span class="logo-sub">Premium Event Management</span></a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="upcoming-events.html">Events</a></li>
+      <li><a href="portfolio.html" style="color:var(--gold)">Portfolio</a></li>
+      <li><a href="sponsorship.html">Partner With Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+919876543210" class="btn btn-outline btn-sm">📞 Call Now</a>
+      <a href="book.html" class="btn btn-gold btn-sm">Book Your Event</a>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="../index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="upcoming-events.html">Events</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="sponsorship.html">Partner With Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" style="color:var(--gold)">Book Your Event →</a>
+</div>
+
+<div class="page-hero">
+  <div class="container page-hero-content">
+    <div class="breadcrumb"><a href="../index.html">Home</a> → Portfolio</div>
+    <span class="section-label">Our Work Speaks</span>
+    <h1 class="section-title">Events We've <span>Made Magical</span></h1>
+    <p style="font-family:var(--font-heading);font-size:1.2rem;font-style:italic;color:var(--white-muted);max-width:580px;line-height:1.7;">A curated showcase of weddings, celebrations, corporate events, and moments we've turned extraordinary.</p>
+  </div>
+</div>
+
+<section style="background:var(--black);">
+  <div class="container">
+    <div class="filter-bar fade-up">
+      <button class="filter-btn active" data-filter="all">All Events</button>
+      <button class="filter-btn" data-filter="wedding">Weddings</button>
+      <button class="filter-btn" data-filter="corporate">Corporate</button>
+      <button class="filter-btn" data-filter="birthday">Birthdays</button>
+      <button class="filter-btn" data-filter="cultural">Cultural</button>
+      <button class="filter-btn" data-filter="decor">Decor & Stage</button>
+    </div>
+
+    <div class="portfolio-masonry fade-up fade-up-delay-1">
+      <div class="portfolio-card large">
+        <div class="portfolio-card-img"><div style="text-align:center"><div class="placeholder-icon">💍</div><div class="placeholder-text">Royal Wedding<br>Photography</div></div></div>
+        <div class="portfolio-card-overlay"><div class="portfolio-card-content"><span class="pcc-category">Wedding</span><span class="pcc-title">Royal Wedding Celebration</span><span class="pcc-location">📍 Kanpur</span></div></div>
+      </div>
+      <div class="portfolio-card tall">
+        <div class="portfolio-card-img" style="height:580px;"><div style="text-align:center"><div class="placeholder-icon">🌸</div><div class="placeholder-text">Floral Stage<br>Design</div></div></div>
+        <div class="portfolio-card-overlay"><div class="portfolio-card-content"><span class="pcc-category">Decor</span><span class="pcc-title">Premium Stage & Floral Setup</span><span class="pcc-location">📍 Unnao</span></div></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img"><div style="text-align:center"><div class="placeholder-icon">🏢</div><div class="placeholder-text">Corporate<br>Conference</div></div></div>
+        <div class="portfolio-card-overlay"><div class="portfolio-card-content"><span class="pcc-category">Corporate</span><span class="pcc-title">Annual Corporate Conference</span><span class="pcc-location">📍 Lucknow</span></div></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img"><div style="text-align:center"><div class="placeholder-icon">🎂</div><div class="placeholder-text">Grand Birthday<br>Party</div></div></div>
+        <div class="portfolio-card-overlay"><div class="portfolio-card-content"><span class="pcc-category">Birthday</span><span class="pcc-title">Grand Birthday Celebration</span><span class="pcc-location">📍 Kanpur</span></div></div>
+      </div>
+      <div class="portfolio-card large">
+        <div class="portfolio-card-img"><div style="text-align:center"><div class="placeholder-icon">🎭</div><div class="placeholder-text">Cultural Event<br>Photography</div></div></div>
+        <div class="portfolio-card-overlay"><div class="portfolio-card-content"><span class="pcc-category">Cultural</span><span class="pcc-title">Grand Cultural Festival</span><span class="pcc-location">📍 Unnao</span></div></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img"><div style="text-align:center"><div class="placeholder-icon">🎓</div><div class="placeholder-text">School Annual<br>Day Event</div></div></div>
+        <div class="portfolio-card-overlay"><div class="portfolio-card-content"><span class="pcc-category">School Event</span><span class="pcc-title">Annual Day Ceremony</span><span class="pcc-location">📍 Unnao</span></div></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img"><div style="text-align:center"><div class="placeholder-icon">🚁</div><div class="placeholder-text">Drone<br>Coverage</div></div></div>
+        <div class="portfolio-card-overlay"><div class="portfolio-card-content"><span class="pcc-category">Photography</span><span class="pcc-title">Aerial Drone Coverage</span><span class="pcc-location">📍 Kanpur</span></div></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img"><div style="text-align:center"><div class="placeholder-icon">🍽️</div><div class="placeholder-text">Catering<br>Setup</div></div></div>
+        <div class="portfolio-card-overlay"><div class="portfolio-card-content"><span class="pcc-category">Catering</span><span class="pcc-title">Premium Wedding Catering</span><span class="pcc-location">📍 Lucknow</span></div></div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img"><div style="text-align:center"><div class="placeholder-icon">🎤</div><div class="placeholder-text">Live Singer<br>Performance</div></div></div>
+        <div class="portfolio-card-overlay"><div class="portfolio-card-content"><span class="pcc-category">Entertainment</span><span class="pcc-title">Live Music Night</span><span class="pcc-location">📍 Kanpur</span></div></div>
+      </div>
+    </div>
+
+    <div class="stats-row fade-up" style="margin-top:4rem;">
+      <div class="stat-box"><span class="stat-box-num" data-target="200" data-suffix="+">200+</span><div class="stat-box-label">Events Delivered</div></div>
+      <div class="stat-box"><span class="stat-box-num" data-target="50" data-suffix="+">50+</span><div class="stat-box-label">Weddings Managed</div></div>
+      <div class="stat-box"><span class="stat-box-num" data-target="30" data-suffix="+">30+</span><div class="stat-box-label">Corporate Events</div></div>
+      <div class="stat-box"><span class="stat-box-num" data-target="100" data-suffix="%">100%</span><div class="stat-box-label">Client Satisfaction</div></div>
+    </div>
+
+    <div style="text-align:center;margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border);" class="fade-up">
+      <span class="section-label">Want an Event Like These?</span>
+      <h2 class="section-title" style="font-size:2.5rem;">Let's Create Your<br><span>Story</span></h2>
+      <p style="color:var(--text-dim);margin:1rem auto 2rem;max-width:480px;">Every event in our portfolio started with a single call. Yours can too.</p>
+      <a href="book.html" class="btn btn-gold btn-lg">Start Planning →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:2rem;border-top:1px solid var(--border);">
+      <a href="../index.html" style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);text-decoration:none;">Rangify Decorz</a>
+      <span style="color:var(--text-dim);font-size:0.8rem;">© 2025 Rangify Decorz. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">💬</a>
+<div class="sticky-cta">
+  <a href="book.html" class="sticky-btn sticky-btn-book">Book Event</a>
+  <a href="tel:+919876543210" class="sticky-btn sticky-btn-call">Call Now</a>
+</div>
+<script src="../js/main.js"></script>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

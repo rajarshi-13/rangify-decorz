@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Rangify Decorz | Premium Event Management</title>
+  <meta name="description" content="Learn about Rangify Decorz — the leading event management company in Unnao, Kanpur & Lucknow. Our story, mission, and the team behind every perfect event." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero {
+      min-height: 50vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 5rem;
+      padding-top: 8rem;
+      position: relative;
+      background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.08) 0%, transparent 60%), var(--black);
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 80px, var(--gold) 80px, var(--gold) 81px),
+        repeating-linear-gradient(90deg, transparent, transparent 80px, var(--gold) 80px, var(--gold) 81px);
+    }
+    .page-hero-content { position: relative; z-index: 1; }
+    .breadcrumb { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 1rem; }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .page-hero h1 { font-size: clamp(3rem, 5vw, 5rem); margin-bottom: 1rem; }
+    .page-hero .lead { font-family: var(--font-heading); font-size: 1.3rem; font-style: italic; color: var(--white-muted); max-width: 600px; line-height: 1.7; }
+    .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .mission-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .mission-vis-box { background: var(--black-card); border: 1px solid var(--border); padding: 2rem; aspect-ratio: 1; display: flex; flex-direction: column; justify-content: flex-end; transition: var(--transition); }
+    .mission-vis-box:hover { border-color: var(--border-strong); }
+    .mission-vis-box:first-child { grid-column: 1/-1; aspect-ratio: 16/7; }
+    .mission-vis-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .mission-vis-box h4 { font-family: var(--font-heading); font-size: 1rem; color: var(--gold); margin-bottom: 0.3rem; }
+    .mission-vis-box p { font-size: 0.78rem; color: var(--text-dim); }
+    .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3.5rem; }
+    .value-card { border: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--black-card); text-align: center; transition: var(--transition); }
+    .value-card:hover { border-color: var(--border-strong); transform: translateY(-4px); box-shadow: var(--shadow-gold); }
+    .value-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+    .value-card h3 { font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); margin-bottom: 0.5rem; }
+    .value-card p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.7; }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    .team-card { background: var(--black-card); border: 1px solid var(--border); overflow: hidden; transition: var(--transition); }
+    .team-card:hover { border-color: var(--border-strong); transform: translateY(-4px); }
+    .team-photo { height: 220px; background: linear-gradient(145deg, #1e1a12, #2a2418); display: flex; align-items: center; justify-content: center; font-size: 3rem; border-bottom: 1px solid var(--border); }
+    .team-info { padding: 1.5rem; }
+    .team-name { font-family: var(--font-heading); font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: 0.3rem; }
+    .team-role { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+    .team-desc { font-size: 0.8rem; color: var(--text-dim); line-height: 1.6; }
+    .timeline { margin-top: 3.5rem; }
+    .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 2rem; margin-bottom: 2rem; align-items: start; }
+    .timeline-year { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--gold); text-align: right; padding-top: 0.3rem; }
+    .timeline-content { border-left: 1px solid var(--border-strong); padding-left: 2rem; padding-bottom: 1.5rem; position: relative; }
+    .timeline-content::before { content: ''; position: absolute; left: -5px; top: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+    .timeline-content h4 { font-family: var(--font-heading); font-size: 1rem; color: var(--white); margin-bottom: 0.4rem; }
+    .timeline-content p { font-size: 0.84rem; color: var(--text-dim); line-height: 1.7; }
+    @media (max-width: 992px) {
+      .mission-grid, .values-grid { grid-template-columns: 1fr 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .values-grid, .team-grid { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 80px 1fr; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="logo">
+      <span class="logo-main">Rangify Decorz</span>
+      <span class="logo-sub">Premium Event Management</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#services">Services</a></li>
+      <li><a href="about.html" style="color:var(--gold)">About</a></li>
+      <li><a href="upcoming-events.html">Events</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="sponsorship.html">Partner With Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+919876543210" class="btn btn-outline btn-sm">📞 Call Now</a>
+      <a href="book.html" class="btn btn-gold btn-sm">Book Your Event</a>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="../index.html">Home</a>
+  <a href="../index.html#services">Services</a>
+  <a href="about.html">About</a>
+  <a href="upcoming-events.html">Events</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="sponsorship.html">Partner With Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" style="color:var(--gold)">Book Your Event →</a>
+</div>
+
+<div class="page-hero">
+  <div class="container page-hero-content">
+    <div class="breadcrumb"><a href="../index.html">Home</a> → About Us</div>
+    <span class="section-label">Our Story</span>
+    <h1 class="section-title">The People Behind<br>Every <span>Perfect Event</span></h1>
+    <p class="lead">Born from a passion for perfection and a vision to transform event experiences in Uttar Pradesh.</p>
+  </div>
+</div>
+
+<section style="background:var(--black);">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="fade-up">
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-title">More Than an<br><span>Event Company</span></h2>
+        <div class="divider"></div>
+        <p style="color:var(--white-muted);line-height:1.9;margin-bottom:1.5rem;">Rangify Decorz was founded with one unwavering belief: every celebration deserves to be extraordinary — regardless of budget. We saw a gap in the region between generic local event setups and the premium, stress-free experience that families and businesses truly deserve.</p>
+        <p style="color:var(--text-dim);line-height:1.9;margin-bottom:2rem;">We built Rangify Decorz from the ground up — with our own team, our own materials, and our own standards. Today, we are proud to be the most trusted end-to-end event management company in Unnao, Kanpur, and Lucknow.</p>
+        <div class="why-promise">
+          <p>"Our mission is simple: you tell us your dream, and we make it real — handling every detail so you can be fully present in the moment."</p>
+        </div>
+      </div>
+      <div class="mission-visual fade-up fade-up-delay-2">
+        <div class="mission-vis-box">
+          <div class="mission-vis-icon">🏆</div>
+          <h4>Founded in Unnao</h4>
+          <p>Proudly local, regionally trusted — serving Unnao, Kanpur & Lucknow</p>
+        </div>
+        <div class="mission-vis-box">
+          <div class="mission-vis-icon">👥</div>
+          <h4>In-House Team</h4>
+          <p>Our dedicated professionals — not outsourced staff</p>
+        </div>
+        <div class="mission-vis-box">
+          <div class="mission-vis-icon">🌐</div>
+          <h4>100+ Vendors</h4>
+          <p>Vetted partner network for every event need</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--black-soft);">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;max-width:600px;margin:0 auto;">
+      <span class="section-label">What Drives Us</span>
+      <h2 class="section-title">Our Core <span>Values</span></h2>
+      <div class="divider divider-center"></div>
+    </div>
+    <div class="values-grid fade-up fade-up-delay-1">
+      <div class="value-card">
+        <span class="value-icon">💎</span>
+        <h3>Excellence</h3>
+        <p>We hold ourselves to the highest standards in every service we deliver — no shortcuts, no compromises.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🤝</span>
+        <h3>Integrity</h3>
+        <p>Transparent pricing, honest communication, and complete accountability — always and in everything.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🎯</span>
+        <h3>Precision</h3>
+        <p>Every detail matters. We plan meticulously and execute flawlessly so nothing is left to chance.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">❤️</span>
+        <h3>Passion</h3>
+        <p>We genuinely love what we do. Every event is personal to us — not just a transaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--black);">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;max-width:600px;margin:0 auto;">
+      <span class="section-label">Meet The Team</span>
+      <h2 class="section-title">The Experts Behind<br>Your <span>Perfect Event</span></h2>
+      <div class="divider divider-center"></div>
+    </div>
+    <div class="team-grid fade-up fade-up-delay-1">
+      <div class="team-card">
+        <div class="team-photo">👤</div>
+        <div class="team-info">
+          <div class="team-role">Founder & CEO</div>
+          <div class="team-name">Founder Name</div>
+          <p class="team-desc">Visionary behind Rangify Decorz with 8+ years in event management across UP.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">👤</div>
+        <div class="team-info">
+          <div class="team-role">Head of Events</div>
+          <div class="team-name">Event Lead Name</div>
+          <p class="team-desc">Master coordinator who ensures every event timeline is executed to perfection.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">👤</div>
+        <div class="team-info">
+          <div class="team-role">Creative Director</div>
+          <div class="team-name">Creative Lead Name</div>
+          <p class="team-desc">Design visionary behind our stunning stage setups and floral installations.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">👤</div>
+        <div class="team-info">
+          <div class="team-role">Client Relations</div>
+          <div class="team-name">Relations Lead Name</div>
+          <p class="team-desc">Your dedicated point of contact — ensuring seamless communication throughout.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--black-soft);">
+  <div class="container">
+    <div class="fade-up" style="max-width:700px;">
+      <span class="section-label">Our Journey</span>
+      <h2 class="section-title">How We Got <span>Here</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline fade-up fade-up-delay-1">
+      <div class="timeline-item">
+        <div class="timeline-year">Start</div>
+        <div class="timeline-content">
+          <h4>The Idea is Born</h4>
+          <p>Founded in Unnao with a mission to bring premium event management to the region — starting with a small, passionate team and big ambitions.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Year 1</div>
+        <div class="timeline-content">
+          <h4>First 50 Events</h4>
+          <p>Successfully managed our first 50 events across Unnao and Kanpur — building our vendor network and earning our first loyal client base.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Year 2</div>
+        <div class="timeline-content">
+          <h4>Expanding to Lucknow</h4>
+          <p>Grew our operations to Lucknow and expanded our team, acquiring in-house equipment and materials to improve quality and cost efficiency.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Today</div>
+        <div class="timeline-content">
+          <h4>Regional Market Leaders</h4>
+          <p>200+ events managed, 500+ happy clients, and a reputation as the most trusted premium event management company in the Unnao-Kanpur-Lucknow region.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2025</div>
+        <div class="timeline-content">
+          <h4>Grand Official Launch</h4>
+          <p>Launching officially with our Grand Launch Event — marking a new chapter of growth, partnerships, and premium event experiences across Uttar Pradesh.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <div class="fade-up">
+      <div class="final-cta-label">Let's Work Together</div>
+      <h2 class="section-title">Ready to Plan Your<br><span>Perfect Event?</span></h2>
+      <p>Experience the Rangify Decorz difference — premium, stress-free event management tailored to you.</p>
+      <div class="final-cta-btns">
+        <a href="book.html" class="btn btn-gold btn-lg">Book A Free Consultation →</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Contact Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:2rem;border-top:1px solid var(--border);">
+      <a href="../index.html" style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);text-decoration:none;">Rangify Decorz</a>
+      <span style="color:var(--text-dim);font-size:0.8rem;">© 2025 Rangify Decorz. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">💬</a>
+<script src="../js/main.js"></script>
+</body>
+</html>

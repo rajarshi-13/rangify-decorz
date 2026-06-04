@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Rangify Decorz | Complete Event Management Services</title>
+  <meta name="description" content="Explore all event management services by Rangify Decorz — weddings, corporate events, decoration, catering, photography, DJ, artists & more in Unnao, Kanpur, Lucknow." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero { min-height: 44vh; display:flex; align-items:flex-end; padding-bottom:5rem; padding-top:8rem; position:relative; background:radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.08) 0%, transparent 60%), var(--black); overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; inset:0; opacity:0.03; background-image: repeating-linear-gradient(0deg, transparent, transparent 80px, var(--gold) 80px, var(--gold) 81px), repeating-linear-gradient(90deg, transparent, transparent 80px, var(--gold) 80px, var(--gold) 81px); }
+    .page-hero-content { position:relative; z-index:1; }
+    .breadcrumb { font-size:0.72rem; color:var(--text-dim); margin-bottom:1rem; }
+    .breadcrumb a { color:var(--gold); text-decoration:none; }
+    .service-category { margin-bottom: 5rem; }
+    .service-category-header { display:flex; align-items:flex-end; gap:2rem; margin-bottom:2.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--border); }
+    .category-icon { font-size:3rem; }
+    .service-category-header h2 { font-size:2rem; margin:0; }
+    .service-category-header p { color:var(--text-dim); font-size:0.9rem; max-width:500px; }
+    .service-detail-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; }
+    .service-detail-card { background:var(--black-card); border:1px solid var(--border); padding:1.8rem; transition:var(--transition); }
+    .service-detail-card:hover { border-color:var(--border-strong); background:var(--black-card2); }
+    .sdc-icon { font-size:1.6rem; margin-bottom:0.9rem; }
+    .sdc-title { font-family:var(--font-heading); font-size:1rem; font-weight:600; color:var(--white); margin-bottom:0.4rem; }
+    .sdc-desc { font-size:0.82rem; color:var(--text-dim); line-height:1.7; }
+    .services-nav { display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:3rem; padding:1.5rem 0; border-bottom:1px solid var(--border); }
+    .services-nav a { padding:0.5rem 1.2rem; border:1px solid var(--border); color:var(--text-dim); text-decoration:none; font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; transition:var(--transition); }
+    .services-nav a:hover, .services-nav a.active { border-color:var(--gold); color:var(--gold); background:rgba(201,168,76,0.06); }
+    @media (max-width:768px) { .service-detail-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:480px) { .service-detail-grid { grid-template-columns:1fr; } .service-category-header { flex-direction:column; align-items:flex-start; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="../index.html" class="logo"><span class="logo-main">Rangify Decorz</span><span class="logo-sub">Premium Event Management</span></a>
+    <ul class="nav-links">
+      <li><a href="services.html" style="color:var(--gold)">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="upcoming-events.html">Events</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="sponsorship.html">Partner With Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+919876543210" class="btn btn-outline btn-sm">📞 Call Now</a>
+      <a href="book.html" class="btn btn-gold btn-sm">Book Your Event</a>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="../index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="upcoming-events.html">Events</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="sponsorship.html">Partner With Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="book.html" style="color:var(--gold)">Book Your Event →</a>
+</div>
+
+<div class="page-hero">
+  <div class="container page-hero-content">
+    <div class="breadcrumb"><a href="../index.html">Home</a> → Services</div>
+    <span class="section-label">Everything Under One Roof</span>
+    <h1 class="section-title">Complete Event<br><span>Management Services</span></h1>
+    <p class="lead" style="font-family:var(--font-heading);font-size:1.2rem;font-style:italic;color:var(--white-muted);max-width:580px;">From concept to execution — every service your event needs, managed by one dedicated team.</p>
+  </div>
+</div>
+
+<section style="background:var(--black);">
+  <div class="container">
+    <nav class="services-nav fade-up">
+      <a href="#planning" class="active">Planning</a>
+      <a href="#wedding">Weddings</a>
+      <a href="#corporate">Corporate</a>
+      <a href="#decor">Decor & Stage</a>
+      <a href="#entertainment">Entertainment</a>
+      <a href="#catering">Catering</a>
+      <a href="#media">Photography</a>
+      <a href="#venue">Venue & Logistics</a>
+    </nav>
+
+    <!-- Planning & Management -->
+    <div class="service-category fade-up" id="planning">
+      <div class="service-category-header">
+        <div class="category-icon">📋</div>
+        <div>
+          <h2 class="section-title" style="font-size:2rem;margin:0 0 0.5rem;">Event Planning & Management</h2>
+          <p>End-to-end event planning with a dedicated manager who handles everything from the first call to the final farewell.</p>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="service-detail-card"><div class="sdc-icon">🗓️</div><div class="sdc-title">Full Event Planning</div><div class="sdc-desc">Comprehensive planning including timelines, task coordination, budget management, and vendor bookings.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">⚡</div><div class="sdc-title">On-Ground Execution</div><div class="sdc-desc">Our team is fully present on the event day — managing every element live from setup to wrap-up.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">👥</div><div class="sdc-title">Guest Management</div><div class="sdc-desc">RSVP management, guest list coordination, seating arrangements, and reception management.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🔗</div><div class="sdc-title">Vendor Management</div><div class="sdc-desc">We source, negotiate, and coordinate with all vendors on your behalf — zero stress for you.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">📊</div><div class="sdc-title">Budget Management</div><div class="sdc-desc">Transparent cost planning and tracking to ensure your event stays on budget without compromise.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🚛</div><div class="sdc-title">Logistics Management</div><div class="sdc-desc">Equipment transport, setup logistics, and complete on-site coordination handled professionally.</div></div>
+      </div>
+    </div>
+
+    <!-- Weddings -->
+    <div class="service-category fade-up" id="wedding">
+      <div class="service-category-header">
+        <div class="category-icon">💍</div>
+        <div>
+          <h2 class="section-title" style="font-size:2rem;margin:0 0 0.5rem;">Wedding Planning</h2>
+          <p>Your wedding day is the most important day of your life. We ensure every moment is absolutely perfect.</p>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="service-detail-card"><div class="sdc-icon">💒</div><div class="sdc-title">Full Wedding Management</div><div class="sdc-desc">End-to-end management covering all pre-wedding, wedding, and post-wedding functions.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🕌</div><div class="sdc-title">Ceremony Planning</div><div class="sdc-desc">Mehendi, Sangeet, Haldi, Nikah, Wedding ceremony — each ritual planned and executed beautifully.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">💐</div><div class="sdc-title">Reception Management</div><div class="sdc-desc">Grand receptions with premium décor, entertainment, catering, and guest experience management.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🏨</div><div class="sdc-title">Venue Selection</div><div class="sdc-desc">Expert guidance in selecting the perfect venue — banquet halls, farmhouses, or outdoor spaces.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">👗</div><div class="sdc-title">Wedding Theme Design</div><div class="sdc-desc">Custom theme creation — Royal, Floral, Rustic, Modern, or fully bespoke designs.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">📋</div><div class="sdc-title">Wedding Checklist Management</div><div class="sdc-desc">Comprehensive checklist management ensuring nothing is missed on your most important day.</div></div>
+      </div>
+    </div>
+
+    <!-- Corporate -->
+    <div class="service-category fade-up" id="corporate">
+      <div class="service-category-header">
+        <div class="category-icon">🏢</div>
+        <div>
+          <h2 class="section-title" style="font-size:2rem;margin:0 0 0.5rem;">Corporate Events</h2>
+          <p>Professional corporate event management that reflects your brand's standards and impresses every attendee.</p>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="service-detail-card"><div class="sdc-icon">🎙️</div><div class="sdc-title">Conferences & Seminars</div><div class="sdc-desc">Full AV setup, stage management, speaker coordination, and registration management.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🚀</div><div class="sdc-title">Product Launches</div><div class="sdc-desc">High-impact product launch events with premium production and media management.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🏆</div><div class="sdc-title">Award Ceremonies</div><div class="sdc-desc">Elegant award nights with premium stage design, anchor management, and live entertainment.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🤝</div><div class="sdc-title">Team Events & Outings</div><div class="sdc-desc">Corporate team-building events, annual parties, and company celebrations.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🏫</div><div class="sdc-title">School & College Events</div><div class="sdc-desc">Annual days, graduation ceremonies, fests, and educational institution events.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">📅</div><div class="sdc-title">Exhibition & Expos</div><div class="sdc-desc">Stall design, registration management, and complete expo/exhibition event planning.</div></div>
+      </div>
+    </div>
+
+    <!-- Decor -->
+    <div class="service-category fade-up" id="decor">
+      <div class="service-category-header">
+        <div class="category-icon">🌸</div>
+        <div>
+          <h2 class="section-title" style="font-size:2rem;margin:0 0 0.5rem;">Decoration & Stage Design</h2>
+          <p>Breathtaking décor and stage designs using in-house materials — creating immersive event environments.</p>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="service-detail-card"><div class="sdc-icon">🎭</div><div class="sdc-title">Stage Design & Setup</div><div class="sdc-desc">Custom stage structures, LED backdrops, lighting design, and complete stage architecture.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">💐</div><div class="sdc-title">Floral Decoration</div><div class="sdc-desc">Fresh and artificial floral arrangements — mandaps, arches, table centerpieces, and venue décor.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🎈</div><div class="sdc-title">Balloon Decoration</div><div class="sdc-desc">Creative balloon setups, arches, and themed decorations for birthdays and celebrations.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">💡</div><div class="sdc-title">Lighting Design</div><div class="sdc-desc">Ambient, functional, and dramatic lighting setups — fairy lights, spotlights, LED systems.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🏮</div><div class="sdc-title">Theme Decoration</div><div class="sdc-desc">Custom themed environments — Bollywood, Royal, Garden, Vintage, Luxury, and more.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🌿</div><div class="sdc-title">Venue Styling</div><div class="sdc-desc">Complete venue transformation with draping, floral, furniture, and atmospheric elements.</div></div>
+      </div>
+    </div>
+
+    <!-- Entertainment -->
+    <div class="service-category fade-up" id="entertainment">
+      <div class="service-category-header">
+        <div class="category-icon">🎤</div>
+        <div>
+          <h2 class="section-title" style="font-size:2rem;margin:0 0 0.5rem;">Entertainment & Artists</h2>
+          <p>Professional entertainment management — from DJs and live singers to anchors and performers.</p>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="service-detail-card"><div class="sdc-icon">🎧</div><div class="sdc-title">DJ Management</div><div class="sdc-desc">Top-quality DJs with professional sound systems for weddings, parties, and corporate events.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🎵</div><div class="sdc-title">Live Singers</div><div class="sdc-desc">Talented live vocalists and performers for Sangeet nights, corporate functions, and celebrations.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🎙️</div><div class="sdc-title">Professional Anchors</div><div class="sdc-desc">Experienced anchors who keep your event engaging, on-schedule, and memorable for all guests.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🎭</div><div class="sdc-title">Artist Management</div><div class="sdc-desc">Booking and managing performers, comedians, dancers, and specialty acts for your event.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🎺</div><div class="sdc-title">Dhol & Band</div><div class="sdc-desc">Traditional dhol players and bands for baraat, sangeet, and festive event requirements.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🔊</div><div class="sdc-title">Sound & AV Systems</div><div class="sdc-desc">Professional PA systems, audio equipment, and complete audio-visual management.</div></div>
+      </div>
+    </div>
+
+    <!-- Catering -->
+    <div class="service-category fade-up" id="catering">
+      <div class="service-category-header">
+        <div class="category-icon">🍽️</div>
+        <div>
+          <h2 class="section-title" style="font-size:2rem;margin:0 0 0.5rem;">Catering & Food Services</h2>
+          <p>Authentic flavors and premium presentation — from traditional halwai to modern multi-cuisine catering.</p>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="service-detail-card"><div class="sdc-icon">🍛</div><div class="sdc-title">Premium Catering</div><div class="sdc-desc">Multi-cuisine catering for weddings, corporate events, and celebrations — customized menus.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🍮</div><div class="sdc-title">Halwai Services</div><div class="sdc-desc">Traditional halwai for authentic Indian sweets, mithai, and traditional food preparation.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🥘</div><div class="sdc-title">Live Cooking Stations</div><div class="sdc-desc">Interactive live cooking counters — chaat, tawa, grill, and specialty food stations.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🍰</div><div class="sdc-title">Dessert Management</div><div class="sdc-desc">Custom cakes, dessert tables, and sweet counters for all celebrations.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🥂</div><div class="sdc-title">Beverage Management</div><div class="sdc-desc">Complete F&B management including mocktails, juices, tea/coffee counters, and welcome drinks.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🌊</div><div class="sdc-title">Water Supply</div><div class="sdc-desc">Reliable water supply management for large-scale outdoor events and remote venues.</div></div>
+      </div>
+    </div>
+
+    <!-- Photography -->
+    <div class="service-category fade-up" id="media">
+      <div class="service-category-header">
+        <div class="category-icon">📸</div>
+        <div>
+          <h2 class="section-title" style="font-size:2rem;margin:0 0 0.5rem;">Photography & Media</h2>
+          <p>Cinematic storytelling that preserves every precious moment of your event forever.</p>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="service-detail-card"><div class="sdc-icon">📷</div><div class="sdc-title">Event Photography</div><div class="sdc-desc">Professional photography capturing candid moments, posed portraits, and event highlights.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🎬</div><div class="sdc-title">Videography</div><div class="sdc-desc">Cinematic event films with professional editing, music, and highlight reels.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🚁</div><div class="sdc-title">Drone Coverage</div><div class="sdc-desc">Stunning aerial drone photography and videography for weddings and large outdoor events.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">📱</div><div class="sdc-title">Live Streaming</div><div class="sdc-desc">Professional live streaming setup for guests who can't attend in person — broadcast your event live.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🖼️</div><div class="sdc-title">Photo Booth</div><div class="sdc-desc">Fun, themed photo booth setups with instant printing for guest engagement.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">💿</div><div class="sdc-title">Post-Production</div><div class="sdc-desc">Premium video editing, photo albums, highlight reels, and cinematic wedding films.</div></div>
+      </div>
+    </div>
+
+    <!-- Venue -->
+    <div class="service-category fade-up" id="venue">
+      <div class="service-category-header">
+        <div class="category-icon">🏛️</div>
+        <div>
+          <h2 class="section-title" style="font-size:2rem;margin:0 0 0.5rem;">Venue & Logistics</h2>
+          <p>Finding the perfect space and managing all the behind-the-scenes logistics that make events run smoothly.</p>
+        </div>
+      </div>
+      <div class="service-detail-grid">
+        <div class="service-detail-card"><div class="sdc-icon">🏨</div><div class="sdc-title">Venue Booking</div><div class="sdc-desc">Expert venue sourcing and booking — banquet halls, farmhouses, hotels, and outdoor venues.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">⛺</div><div class="sdc-title">Tent & Pandal</div><div class="sdc-desc">Professional tent installation and pandal setup for outdoor and large-scale events.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🪑</div><div class="sdc-title">Furniture & Equipment</div><div class="sdc-desc">Tables, chairs, stage equipment, and event furniture — supplied and managed by our team.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🚗</div><div class="sdc-title">Transport & Logistics</div><div class="sdc-desc">Equipment transport, vendor coordination, and complete logistics management for your event.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🔐</div><div class="sdc-title">Security Management</div><div class="sdc-desc">Event security coordination, crowd management, and guest safety management.</div></div>
+        <div class="service-detail-card"><div class="sdc-icon">🌊</div><div class="sdc-title">Water Supply</div><div class="sdc-desc">Reliable water supply arrangement for large outdoor events and remote event locations.</div></div>
+      </div>
+    </div>
+
+    <div class="fade-up" style="text-align:center;padding:3rem 0;border-top:1px solid var(--border);">
+      <h3 style="font-family:var(--font-display);font-size:2rem;margin-bottom:1rem;">Need a <span style="color:var(--gold);font-style:italic;">Custom Package?</span></h3>
+      <p style="color:var(--text-dim);margin-bottom:2rem;">Tell us your requirements and we'll design a customized package just for you.</p>
+      <a href="book.html" class="btn btn-gold btn-lg">Get Custom Quote →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:2rem;border-top:1px solid var(--border);">
+      <a href="../index.html" style="font-family:var(--font-display);font-size:1.4rem;color:var(--gold);text-decoration:none;">Rangify Decorz</a>
+      <span style="color:var(--text-dim);font-size:0.8rem;">© 2025 Rangify Decorz. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">💬</a>
+<div class="sticky-cta">
+  <a href="book.html" class="sticky-btn sticky-btn-book">Book Event</a>
+  <a href="tel:+919876543210" class="sticky-btn sticky-btn-call">Call Now</a>
+</div>
+<script src="../js/main.js"></script>
+</body>
+</html>
